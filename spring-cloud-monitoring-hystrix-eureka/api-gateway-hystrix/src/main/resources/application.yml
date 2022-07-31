@@ -1,0 +1,42 @@
+server:
+  port: 8080    #port number
+
+spring:
+  application:
+    name: api-gateway
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 5
+    leaseExpirationDurationInSeconds: 2
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5
+
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+#        hystrix.stream, info, health
+
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: "*"
+
+#microservices
+micro-service:
+  employee-service:
+    name: employee-service
+
+logging:
+  level:
+    com.self.sprintboot.learning.apigateway: DEBUG
+
+#Hystrix Stream:  http://localhost:8080/actuator/hystrix.stream

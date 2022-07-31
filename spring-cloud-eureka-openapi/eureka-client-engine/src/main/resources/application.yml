@@ -1,0 +1,28 @@
+server:
+  port: 8081
+#  servlet:
+#    contextPath: /self-service/
+
+gateway-path: /self-service/client/
+
+spring:
+  application:
+    name: client-engine
+  liquibase.enabled: false
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+#microservices
+micro-service:
+  my-service:
+    name: common-service
+
+#springdoc:
+#  swagger-ui:
+#    path: /swagger-ui-custom.html
+#    operationsSorter: method

@@ -1,0 +1,59 @@
+server:
+  port: 8080
+
+app-path: /self-service/
+allowedOrigins: http://localhost:4200, http://localhost:3000
+
+springdoc:
+  version: '@springdoc.version@'
+#  pathsToMatch: /v1, /api/balance/**
+  show-actuator: true
+  api-docs:
+    path: ${app-path}v3/api-docs
+  swagger-ui:
+    path: ${app-path}swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+    doc-expansion: none
+
+spring:
+  application:
+    name: gateway
+### base path of webflux application is not work with cloud gateway
+#    webflux:
+#      base-path: /self-service/
+  cloud:
+    gateway:
+      routes:
+        - id: openapi
+          uri: http://localhost:${server.port}
+          predicates:
+            - Path=${springdoc.api-docs.path}/**
+          filters:
+            - RewritePath=${springdoc.api-docs.path}/(?<segment>.*), ${app-path}/$\{segment}/v3/api-docs
+        - id: client-engine
+          uri: lb://client-engine/
+          predicates:
+            - Path=${app-path}client/**
+          filters:
+            - RewritePath=${app-path}client/(?<segment>.*), /$\{segment}
+        - id: example-engine
+          uri: lb://example-engine/
+          predicates:
+            - Path=${app-path}example/**
+          filters:
+            - RewritePath=${app-path}example/(?<segment>.*), /$\{segment}
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+#logging:
+#  file:
+#    path: logs
+#    name: gateway.log
+
+# link call this project: http://localhost:8080/self-service/swagger-ui.html

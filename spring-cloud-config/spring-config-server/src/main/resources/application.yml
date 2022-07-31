@@ -1,0 +1,28 @@
+#Server port
+server:
+  port: 8888
+
+#Git repo location.
+spring:
+  application:
+    name: server-config
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        composite:
+          type: composite
+        native:
+          searchLocations: E:\\GitHub\\microservices\\Spring-Cloud-Config\\config-git-repo
+#        git:
+#          uri: https://github.com/thuongtrinh/microservices.git
+#          cloneOnStart: true
+
+#Verify any repository issue in service startup
+#spring.cloud.config.server.git.cloneOnStart=true
+
+#Disable security of the Management endpoint
+management:
+  security:
+    enabled: false

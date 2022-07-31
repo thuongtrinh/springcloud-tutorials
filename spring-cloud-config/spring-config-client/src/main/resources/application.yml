@@ -1,0 +1,15 @@
+# Read file on Config-Server:
+# client-config.properties or client-config.yml
+spring:
+  application:
+    name: client-config
+  profiles:
+    active: dev
+  cloud:
+    config:
+      uri: http://localhost:8888
+
+# N.B. this is the default:
+management:
+  security:
+    enabled: false

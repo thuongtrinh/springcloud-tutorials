@@ -1,0 +1,27 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: config
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        composite:
+          type: composite
+        native:
+          searchLocations: file:D:\\GitHub\\microservices\\spring-cloud-bootstrap\\application-config
+  security:
+    user:
+      name: configUser
+      password: configPassword
+      role: SYSTEM
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://root:123456@localhost:8761/eureka/
+  instance:
+    preferIpAddress: true
