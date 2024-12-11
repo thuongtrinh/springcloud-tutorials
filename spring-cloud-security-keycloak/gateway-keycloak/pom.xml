@@ -9,8 +9,7 @@
 		<relativePath/>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-
-	<artifactId>gateway</artifactId>
+	<artifactId>gateway-keycloak</artifactId>
 
 	<properties>
 		<java.version>11</java.version>
