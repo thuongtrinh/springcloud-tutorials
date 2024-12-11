@@ -13,7 +13,7 @@
 
     <parent>
         <groupId>com.txt.springzipkin</groupId>
-        <artifactId>zipkin</artifactId>
+        <artifactId>spring-cloud-zipkin</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
