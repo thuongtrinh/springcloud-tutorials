@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.txt.eurekacommonservice</groupId>
-    <artifactId>eurekacommonservice</artifactId>
+    <artifactId>eureka-common-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>EurekaCommonService</name>
+    <name>eureka-common-service</name>
     <description>Spring Boot eureka common service</description>
     <properties>
         <java.version>11</java.version>

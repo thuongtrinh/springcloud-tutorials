@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.txt.eurekaclientengine</groupId>
-    <artifactId>eurekaclientengine</artifactId>
+    <artifactId>eureka-client-engine</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>EurekaClientEngine</name>
+    <name>eureka-client-engine</name>
     <description>Spring Boot eureka client engine</description>
     <properties>
         <java.version>11</java.version>

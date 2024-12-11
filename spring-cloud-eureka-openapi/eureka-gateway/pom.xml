@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.txt.eurekagateway</groupId>
-	<artifactId>eurekagateway</artifactId>
+	<artifactId>eureka-gateway</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>EurekaGateway</name>
+	<name>eureka-gateway</name>
 	<description>Demo project for Spring Boot Eureka Gateway</description>
 	<properties>
 		<java.version>11</java.version>
