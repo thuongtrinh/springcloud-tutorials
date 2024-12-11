@@ -4,9 +4,9 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.txt</groupId>
-    <artifactId>spring-cloud-eureka-hystrix</artifactId>
+    <artifactId>spring-cloud-monitoring-hystrix-eureka</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-cloud-eureka-hystrix</name>
+    <name>spring-cloud-monitoring-hystrix-eureka</name>
     <packaging>pom</packaging>
 
     <parent>
@@ -22,8 +22,8 @@
     </properties>
 
     <modules>
-        <module>eureka-server</module>
-        <module>api-gateway</module>
+        <module>eureka-server-hystrix</module>
+        <module>api-gateway-hystrix</module>
         <module>eureka-client-service</module>
     </modules>
 

@@ -4,14 +4,14 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.txt.apigateway</groupId>
-    <artifactId>api-gateway</artifactId>
+    <artifactId>api-gateway-hystrix</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>ApiGatewayHystrix</name>
+    <name>api-gateway-hystrix</name>
     <description>ApiGatewayHystrix project for Spring Boot</description>
 
     <parent>
         <groupId>com.txt</groupId>
-        <artifactId>spring-cloud-eureka-hystrix</artifactId>
+        <artifactId>spring-cloud-monitoring-hystrix-eureka</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 

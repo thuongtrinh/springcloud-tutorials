@@ -4,14 +4,14 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.txt</groupId>
-    <artifactId>eureka-server</artifactId>
+    <artifactId>eureka-server-hystrix</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>EurekaServer</name>
+    <name>eureka-server-hystrix</name>
     <description>EurekaServer project for Spring Boot</description>
 
     <parent>
         <groupId>com.txt</groupId>
-        <artifactId>spring-cloud-eureka-hystrix</artifactId>
+        <artifactId>spring-cloud-monitoring-hystrix-eureka</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
