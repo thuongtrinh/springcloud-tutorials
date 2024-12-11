@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: client-config-app
+  profiles:
+    active: dev
+  cloud:
+    config:
+      uri: http://localhost:8888
+      fail-fast: true
+
+# N.B. this is the default
+management:
+  security:
+    enabled: false

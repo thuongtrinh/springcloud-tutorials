@@ -1,0 +1,26 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: server-config-app
+  profiles:
+#    active: native
+    active: git
+  cloud:
+    config:
+      server:
+#        composite:
+#          type: composite
+#        native:
+#          searchLocations: D:\\github\\java-projects\\spring-cloud-tutorials\\spring-cloud-config-git-integration\\config-path
+        git:
+          default-label: main
+          uri: https://github.com/thuongtrinh/spring-cloud-config-server-repo.git
+          clone-on-start: true    #Verify any repository issue in service startup
+          search-paths: config-client-git
+
+#Disable security of the Management endpoint
+management:
+  security:
+    enabled: false
