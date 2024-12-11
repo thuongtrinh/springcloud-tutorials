@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.txt</groupId>
+    <groupId>com.txt.spring.cloud.bootstrap</groupId>
     <artifactId>spring-cloud-bootstrap</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-cloud-bootstrap</name>
@@ -24,14 +24,14 @@
     </parent>
 
     <modules>
-        <module>config</module>
-        <module>discovery</module>
-        <module>gateway</module>
+        <module>svc-config</module>
+        <module>svc-discovery</module>
+        <module>svc-gateway</module>
         <module>svc-book</module>
         <module>svc-rating</module>
-        <module>zipkin</module>
-        <module>customer-service</module>
-        <module>order-service</module>
+        <module>svc-zipkin</module>
+        <module>svc-customer</module>
+        <module>svc-order</module>
     </modules>
 
     <dependencyManagement>
